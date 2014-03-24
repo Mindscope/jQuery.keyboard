@@ -81,12 +81,12 @@
 		});
 		
 		// Show
-		$('input[type!="submit"],textarea').live('focus', function(e) {
+        $(document).on('focus', 'input[type!="submit"],textarea', function(e) {
 			setFocus($(e.target));
 		});
 		
 		// Hide
-		$('[type="text"],textarea').bind('blur.keyboard', function(e) {
+        $(document).bind('blur.keyboard', '[type="text"],textarea', function(e) {
 			unsetFocus($(e.target));
 		});
 		
